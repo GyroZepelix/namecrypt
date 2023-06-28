@@ -1,15 +1,8 @@
 use aes::Aes128;
-use crossterm::{
-    event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode},
-    execute,
-    terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
-};
-use std::{io, thread, time::Duration};
+
+use std::{thread, time::Duration};
 use tui::{
-    backend::CrosstermBackend,
-    layout::{Constraint, Direction, Layout},
-    widgets::{Block, Borders, Widget},
-    Terminal,
+    widgets::{Block, Borders},
 };
 
 use anyhow::Result;
