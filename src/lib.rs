@@ -1,13 +1,11 @@
 use std::io::{self, Stdout};
 
 use crossterm::{
-    event::{DisableMouseCapture, EnableMouseCapture},
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
 use tui::{
-    backend::{Backend, CrosstermBackend},
-    terminal, Terminal,
+    backend::{Backend, CrosstermBackend}, Terminal,
 };
 
 pub fn setup_terminal() -> Result<Terminal<CrosstermBackend<Stdout>>, std::io::Error> {
